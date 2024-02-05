@@ -6,10 +6,12 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: "https://mern-back-7d3f.onrender.com",
+        origin: "http://localhost:3000",
         methods: ["GET", "POST"],
     },
 });
+
+//that how it works
 
 const userSocketMap = {};
 export const getRecipientSocketId = (recipientId) => userSocketMap[recipientId];

@@ -7,7 +7,18 @@ import userRoutes from "./routes/userRoutes.js";
 import postRoutes from "./routes/postRoutes.js";
 import MessageRoutes from "./routes/MessageRoutes.js";
 import { app, server } from "./socket/socket.js";
+import { cors } from 'cors';
 dotenv.config();
+
+
+
+// ...
+
+app.use(cors({
+    origin: 'https://your-netlify-app.netlify.app',
+    credentials: true,
+}));
+
 
 //limit of data that can be parsed is set to 50mb to avoid payload too large error
 
