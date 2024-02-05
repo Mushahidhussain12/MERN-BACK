@@ -31,7 +31,6 @@ async function signupUser(req, res) {
                 expiresIn: "20d",
             });
             res.cookie("jwt", token, {
-                sameSite: "none",
                 httpOnly: true,
                 maxAge: 15 * 24 * 60 * 1000,
             });
@@ -73,7 +72,6 @@ async function loginUser(req, res) {
             expiresIn: "20d",
         });
         res.cookie("jwt", token, {
-            sameSite: "none",
             httpOnly: true,
             maxAge: 15 * 24 * 60 * 1000,
 
