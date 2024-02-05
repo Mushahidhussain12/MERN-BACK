@@ -14,10 +14,11 @@ dotenv.config();
 
 // ...
 
-app.use(cors({
-    origin: 'https://mern-front-dttq.onrender.com',
-    credentials: true,
-}));
+
+
+app.use(
+    cors({ credentials: true, origin: true, exposedHeaders: ["Set-Cookie"] })
+);
 
 
 //limit of data that can be parsed is set to 50mb to avoid payload too large error
