@@ -15,7 +15,7 @@ dotenv.config();
 // ...
 
 app.use(cors({
-    origin: 'https://your-netlify-app.netlify.app',
+    origin: 'https://mern-front-dttq.onrender.com',
     credentials: true,
 }));
 
